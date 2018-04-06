@@ -4,13 +4,10 @@ def correct_sentence(text: str) -> str:
         and ends with a dot.
     """
     # your code here
-    dot = "."
-    if text[0].islower():
-        first_letter = text[0].upper()
-        text = first_letter + text[1:]
+    first_letter = text[0].upper()
+    text = first_letter + text[1:]
     if not text[len(text)-1] == ".":
-        text += dot
-    print("here is the " + text)
+        text += "."
     return text
 
 
