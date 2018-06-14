@@ -1,3 +1,5 @@
+#return boolean if parameter value is equal to sum of powers of each int
+
 def check_narcissistic_num(num):
 
     num_string_list = [x for x in str(num)]
