@@ -1,18 +1,23 @@
 data = "   123 sd 34 as324 12 sdf34 asd231asd"
 
 
-def parse_digits(data):
+# That's how I would do it
+def parse_digits_(data):
     _list = []
     _tmp = ''
-    for i, v in enumerate(data):
-        if v.isdigit():
-            _tmp += v
-            print(v)
-        if not v.isdigit() and len(_tmp) > 0 or (i == len(data)-1) and (len(_tmp) > 0):
+    for i in data:
+        if i.isdigit():
+            _tmp += i
+        elif not i.isdigit() and len(_tmp) > 0 or (i == len(data) - 1) and (len(_tmp) > 0):
             _list.append(int(_tmp))
             _tmp = ''
     return _list
 
+
+# That's how I should do it
+def parse_digits(data):
+    import itertools
+    return [int(''.join(group)) for is_chunk, group in itertools.groupby(data, key=lambda x: x.isdigit()) if is_chunk]
 
 
 print(parse_digits('1sdafadf 2d fad34e 9234'))
