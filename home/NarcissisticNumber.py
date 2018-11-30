@@ -1,11 +1,5 @@
-#return boolean if parameter value is equal to sum of powers of each int
+# return boolean if parameter value is equal to sum of powers of each int
 
 def check_narcissistic_num(num):
-
-    num_string_list = [x for x in str(num)]
-    num_powers_list = [int(x) ** len(num_string_list) for x in str(num)]
-    sum_value = 0
-    for i in num_powers_list:
-        sum_value += i
-    print(num, sum_value, sum_value == num)
-    return sum_value == num
+    nums_powered_list = [int(x) ** len(str(num)) for x in str(num)]
+    return sum(nums_powered_list) == num

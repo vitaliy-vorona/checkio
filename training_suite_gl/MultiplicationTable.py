@@ -19,4 +19,20 @@ def draw_table():
     return result
 
 
-print(draw_table())
+def draw_table_lc():
+    index = 1
+    table = ''
+    while index < 11:
+        for i in range(1,11):
+            i *= index
+            if i < 10:
+                table += ''.join(str(i)).rjust(4)
+            elif i > 99:
+                table += ''.join(str(i)).rjust(4)
+            else:
+                table += ''.join(str(i)).rjust(4)
+        table += '\n'
+        index += 1
+    return table
+
+print(draw_table_lc())
