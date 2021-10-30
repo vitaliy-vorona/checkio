@@ -1,12 +1,6 @@
 t = ("dr101-mr99", "mr99-out00", "dr101-out00", "scout1-scout2",
      "scout3-scout1", "scout1-scout4", "scout4-sscout", "sscout-super")
 
-string = "sscout"
-ll = list(string)
-ll.reverse()
-ll = ''.join(ll)
-
-
 # def method_3(string_):
 #     string_to_return = ''
 #     sting_len = len(string_)-1
@@ -30,7 +24,7 @@ def get_unique_names(graph):
     return node_names
 
 
-class Graph():
+class Graph:
     def __init__(self):
         self.verticies = {}
 

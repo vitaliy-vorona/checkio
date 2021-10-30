@@ -1,5 +1,5 @@
 def checkio(expression):
-    dic_of_brackets = {']': '[', ')': '(', '}': '{'}
+    dict_of_brackets = {']': '[', ')': '(', '}': '{'}
     open_brackets = ['[', '(', '{']
     close_brackets = [']', ')', '}']
     list_of_brackets = []
@@ -7,14 +7,17 @@ def checkio(expression):
     for i in expression:
         if i in open_brackets:
             list_of_brackets.append(i)
+            continue
         elif i in close_brackets:
-            bracket = dic_of_brackets.get(i)
             if len(list_of_brackets) == 0:
                 return False
-            if list_of_brackets[len(list_of_brackets) - 1] != bracket:
+            expected_bracket_type = dict_of_brackets.get(i)
+            last_open_bracket = list_of_brackets[-1]
+            if last_open_bracket != expected_bracket_type:
                 return False
             list_of_brackets.pop(-1)
     return len(list_of_brackets) == 0
+
 
 # These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
