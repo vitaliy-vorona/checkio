@@ -1,5 +1,7 @@
 
 def count_digits(text: str) -> int:
+    # using map
+    sum(map(str.isdigit, text))
     return sum(char.isdigit() for char in text)
 
 
