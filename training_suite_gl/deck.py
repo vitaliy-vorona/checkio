@@ -1,30 +1,30 @@
 #
 
-class Card():
-    _suites = ('\u2660', '\u2663', '\u2666', '\u2665')
-    _values = ('2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A')
+
+class Card:
+    _suites = ("\u2660", "\u2663", "\u2666", "\u2665")
+    _values = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
 
     def __init__(self, suite, value):
         self.suite = suite
         self.value = value
 
     def __str__(self):
-        return self._suites[self.suite] + ' ' + self._values[self.value]
+        return self._suites[self.suite] + " " + self._values[self.value]
 
 
-class JokerCard():
-
+class JokerCard:
     def __str__(self):
-        return 'JOKER'
+        return "JOKER"
 
 
 class Deck:
-
     def __init__(self):
-        self.cards = [Card(i, x) for i in range(0,4) for x in range(0,13)]
+        self.cards = [Card(i, x) for i in range(0, 4) for x in range(0, 13)]
 
     def shuffle(self):
         from random import shuffle
+
         shuffle(self.cards)
 
     def pop(self, num=-1):
@@ -35,6 +35,7 @@ class Deck:
 
     def random(self):
         from random import choice
+
         return choice(self.cards)
 
     def get_card(self, num):
@@ -69,5 +70,6 @@ def run_some_tests():
     print(deck.pop(23))
     print([str(deck.get_card(i)) for i in range(13)])
     print([str(deck.random()) for i in range(5)])
+
 
 run_some_tests()

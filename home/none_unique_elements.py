@@ -12,5 +12,11 @@ if __name__ == "__main__":
     assert none_unique_numbers([1, 2, 3, 1, 3]) == [1, 3, 1, 3], "1st example"
     assert none_unique_numbers([1, 2, 3, 4, 5]) == [], "2nd example"
     assert none_unique_numbers([5, 5, 5, 5, 5]) == [5, 5, 5, 5, 5], "3rd example"
-    assert none_unique_numbers([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9], "4th example"
+    assert none_unique_numbers([10, 9, 10, 10, 9, 8]) == [
+        10,
+        9,
+        10,
+        10,
+        9,
+    ], "4th example"
     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")

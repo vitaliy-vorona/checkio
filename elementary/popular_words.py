@@ -9,7 +9,7 @@ def popular_words(text, words):
     return words_map
 
 
-p = popular_words("when I was bla bla bla and something else", ['bla', 'I'])
+p = popular_words("when I was bla bla bla and something else", ["bla", "I"])
 print(p)
 #
 # if __name__ == '__main__':

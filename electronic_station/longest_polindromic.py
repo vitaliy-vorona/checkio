@@ -19,7 +19,7 @@ def longest_palindromic(text):
         last_index += 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert longest_palindromic("artrartrt") == "rtrartr", "The Longest"
     assert longest_palindromic("abacada") == "aba", "The First"
     assert longest_palindromic("aaaa") == "aaaa", "The A"

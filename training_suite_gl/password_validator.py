@@ -3,7 +3,9 @@ import random
 
 
 def validate_pwd(pwd):
-    x = [x for x in list(pwd) if str(x).isdigit() or str(x).isupper() or str(x).islower()]
+    x = [
+        x for x in list(pwd) if str(x).isdigit() or str(x).isupper() or str(x).islower()
+    ]
     return len(x) == len(pwd) and 3 < len(x) < 20
 
 

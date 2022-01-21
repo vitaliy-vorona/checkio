@@ -1,6 +1,10 @@
 from random import choice
 
-tests = [([1, 2, 3, 4, 5], [2, 3, 4, 5]), ([5, 4, 1, 3], [5, 4, 3]), ([1, 2, 1], [2, 1])]
+tests = [
+    ([1, 2, 3, 4, 5], [2, 3, 4, 5]),
+    ([5, 4, 1, 3], [5, 4, 3]),
+    ([1, 2, 1], [2, 1]),
+]
 
 
 def remove_smallest_classic(list_):
@@ -26,6 +30,7 @@ for test in tests:
     print(result)
     assert result == test[1], "Wrong :("
     assert result is not test[0], "You can't change original list"
+
 
 def func(a, b, c=2):
     return a + b + c

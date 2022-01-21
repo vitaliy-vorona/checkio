@@ -5,7 +5,15 @@
 # print(filter_numbers(3000, 3010))
 import functools
 
-print(list(map(lambda x, y: str(x) + y, range(11)[::-1], ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'])))
+print(
+    list(
+        map(
+            lambda x, y: str(x) + y,
+            range(11)[::-1],
+            ["a", "b", "c", "d", "e", "f", "g", "h", "i"],
+        )
+    )
+)
 print((9 * 1223))
 
 
@@ -24,10 +32,12 @@ print(functools.reduce(lambda x, y: x * y, range(1, 6)))
 print(functools.reduce(mul, range(1, 6)))
 print(sum(i * i for i in range(1, 6)))
 
+
 def pluser():
     val = 0
     while True:
-       val = (yield val) + 1
+        val = (yield val) + 1
+
 
 p = pluser()
 print(p.send())

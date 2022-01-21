@@ -3,7 +3,7 @@ from typing import Tuple
 
 def sum_by_types(items: list) -> Tuple[str, int]:
     int_result = 0
-    str_result = ''
+    str_result = ""
     for item in items:
         if isinstance(item, int):
             int_result += item

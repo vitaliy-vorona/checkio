@@ -19,7 +19,12 @@ def group_anagrams_(test_list):
     dic_test = {x: 1 for x in test_list}
     print(dic_test)
     # anagram = [dic_test[x] for v in test_list for x in test_list if ''.join(sorted(v)) == ''.join(sorted(x))]
-    anagram = {x for v in test_list for x in test_list if ''.join(sorted(v)) == ''.join(sorted(x))}
+    anagram = {
+        x
+        for v in test_list
+        for x in test_list
+        if "".join(sorted(v)) == "".join(sorted(x))
+    }
     print(anagram)
     return anagram
 

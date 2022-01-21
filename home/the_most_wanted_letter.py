@@ -9,13 +9,13 @@ def checkio(data):
         k = k.lower()
         # if k.isalpha():
         if k in all_letters_dict.keys():
-                all_letters_dict[k] = all_letters_dict.get(k) + 1
+            all_letters_dict[k] = all_letters_dict.get(k) + 1
         else:
-                all_letters_dict[k] = 1
+            all_letters_dict[k] = 1
 
     temp_list = list(all_letters_dict.values())
     temp_list.sort()
-    x = temp_list[len(temp_list)-1]
+    x = temp_list[len(temp_list) - 1]
 
     for k, v in all_letters_dict.items():
         if v == x:
@@ -24,13 +24,17 @@ def checkio(data):
     x = all_letters_keys[0]
     return x
 
-def checkio_via_generator(text):
-    #replace this for solution
-    data={letter:text.lower().count(letter) for letter in list(string.ascii_lowercase)}
-    return max(data,key=data.__getitem__)
 
-if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
+def checkio_via_generator(text):
+    # replace this for solution
+    data = {
+        letter: text.lower().count(letter) for letter in list(string.ascii_lowercase)
+    }
+    return max(data, key=data.__getitem__)
+
+
+if __name__ == "__main__":
+    # These "asserts" using only for self-checking and not necessary for auto-testing
     print(checkio("Hello World!"))
     assert checkio("Hello, World!") == "l", "Hello test"
     assert checkio_via_generator("How do you do?") == "o", "O is most wanted"

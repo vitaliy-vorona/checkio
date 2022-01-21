@@ -1,4 +1,4 @@
-class Warrior():
+class Warrior:
     def __init__(self, health=50, attack=5):
         self.health = health
         self.attack = attack
@@ -15,7 +15,7 @@ class Knight(Warrior):
         super().__init__(health, attack)
 
 
-class Army():
+class Army:
     def __init__(self):
         self.units = []
         self.is_alive = True
@@ -30,22 +30,22 @@ class Army():
         return self.is_alive
 
 
-class Battle():
+class Battle:
     def fight(self, army_a, army_b):
         assert type(army_a and army_b) == Army
         while army_a.is_alive_() and army_b.is_alive_():
             if fight(army_a.units[0], army_b.units[0]):
                 x = army_a.units[0]
-                print('army a units', len(army_a.units))
-                print('army a health', x.health)
+                print("army a units", len(army_a.units))
+                print("army a health", x.health)
                 army_b.units.pop(0)
             else:
                 y = army_a.units[0]
-                print('army b units', len(army_b.units))
-                print('army b health', y.health)
+                print("army b units", len(army_b.units))
+                print("army b health", y.health)
                 army_a.units.pop(0)
-        print('Fight is over')
-        print('Battle is over')
+        print("Fight is over")
+        print("Battle is over")
         return army_a.is_alive
 
 
@@ -60,7 +60,7 @@ def fight(warrior_a, warrior_b):
     return warrior_a.is_alive_()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # These "asserts" using only for self-checking and not necessary for auto-testing
 
     chuck = Warrior()
@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
     print("Coding complete? Let's try tests!")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # These "asserts" using only for self-checking and not necessary for auto-testing
 
     # fight tests
